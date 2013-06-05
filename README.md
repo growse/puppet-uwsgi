@@ -29,6 +29,15 @@ Multiple plugins are possible, too.
     }
 ```
 
+By default, debian based default prefix is 'uwsgi-plugin-'. Specific plugin prefixes could be supplied too.  For example :
+
+```
+    uwsgi::plugin { 'plugins':
+        ensure => present,
+        plugin_prefix => 'uwsgi-infrastructure-'
+    }
+```
+
 Creating and enabling an application
 ---------------------------------------
 
