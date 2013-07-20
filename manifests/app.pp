@@ -16,6 +16,9 @@ define uwsgi::app (
   $chdir          = undef,
   $uid            = undef,
   $gid            = undef,
+  $home 	  = undef,
+  $modulename     = undef,
+  $buffersize     = 0
 ) {
 
   validate_re($ensure, '^(present|absent)$',
