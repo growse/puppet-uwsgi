@@ -10,7 +10,7 @@
     gid = <%= @gid %>
 <% end -%>
     vhost = <%= @vhost %>
-    plugins = <%=plugins.join(',') %>
+    plugins = <%=@plugins.join(',') %>
 <% if @socket -%>
     socket = <%= @socket %>
 <% end -%>
@@ -49,5 +49,5 @@
     home = <%= @home %>
 <% end -%>
 <% if @buffersize -%>
-    buffer-size = <%= buffersize %>
+    buffer-size = <%= @buffersize %>
 <% end -%>
