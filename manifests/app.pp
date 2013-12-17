@@ -30,7 +30,6 @@ define uwsgi::app (
     $available_path = "${uwsgi::app_dir}/apps-available/${name}.ini"
     $enabled_path = "${uwsgi::app_dir}/apps-enabled/${name}.ini"
 
-    install_plugins{$plugins:;}
 
     file { $available_path:
         ensure  => $ensure,
@@ -56,10 +55,4 @@ define uwsgi::app (
         notify => Service['uwsgi'],
     }
 
-}
-
-define install_plugins {
-    package{"uwsgi-plugin-$name":
-        ensure => installed
-    }
 }
