@@ -1,6 +1,6 @@
 class uwsgi::params {
     case $::operatingsystem {
-        Debian,Ubuntu: {
+        /^(Debian|Ubuntu)$/: {
             $package                      = 'uwsgi'
             $app_dir                      = '/etc/uwsgi'
             $plugin_python_package        = 'uwsgi-plugin-python'
